@@ -1,0 +1,72 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>I Heart Beauty Product</TITLE>
+    <style>
+      #box{
+        color:white;
+      text-decoration:none;
+      }
+      #log{
+        text-decoration:none;
+        color:blue;
+      }
+      .social-media{
+        margin:30px auto;
+        text-align:center;
+      }
+      .social-media
+      img{
+        width: 60px;
+        margin: 0 30px;
+        box-shadow: 0 0 10px 0 #7f7f7f;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </HEAD>
+  <BODY background="/" >
+    <table width="100%">
+      <tr>
+        <th width="20%"><img src="/images/1.png" height="100" width="200px" alt="Image"></img></th>
+        <th width="50%"><input type="text" size="80px" height="80px" placeholder="Search for product" alt="Image"></th>
+        <th width="10%"><button>Search</button></form></th>
+        <th width="20%"><a href="/lipstick/cart.html"><img src="/images/images.png" height="50" width="70" align="right"></marquee></a></th>
+      </tr>
+    </table><br>
+    <TABLE  WIDTH="100%" BGCOLOR="LIGHTBLUE">
+      <tr>
+        <th width="20%"><a href="/Home_page.html" id="box">HOME</a></th>
+                <TH WIDTH="20%"><A HREF="/Categories.HTML" id="box">CATEGORIES</A></TH>
+        <TH WIDTH="20%"><A HREF="/face/P1.HTML" id="box">FACE</A></TH>
+        <TH WIDTH="20%"><A HREF="/lips/P1.HTML" id="box">LIPS  </A></TH>
+        <TH WIDTH="20%"><A HREF="/Eyes/P1.HTML" id="box">EYES</A></TH>
+        <TH WIDTH="20%"><A HREF="/logn/login.html" id="log">LOGIN/SIGN UP</A></TH>
+      </tr>
+    </TABLE><br>
+    <h1>Shopping Cart</h1>
+    <ul id="cart-items"></ul>
+    <button onclick="buyProduct()"><a href="buy.html" >Buy</a></button>
+    <script>
+      // Retrieve cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        // Display cart items
+        var cartList = document.getElementById('cart-items');
+        cartItems.forEach(function(item) {
+            var listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <div>
+                    <p>${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                    <p>Description: ${item.description}</p>
+                </div>
+            `;
+            cartList.appendChild(listItem);
+        });
+      function buyProduct() {
+        localStorage.removeItem('cart');
+      }
+    </script>
+  </body>
+</html>

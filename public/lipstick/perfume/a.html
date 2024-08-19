@@ -1,0 +1,114 @@
+<HTML>
+  <HEAD>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>I Heart Beauty Product</TITLE>
+    <style>
+      #box{
+        color:white;
+      text-decoration:none;
+      }
+      #log{
+        text-decoration:none;
+        color:blue;
+      }
+      .social-media{
+        margin:30px auto;
+        text-align:center;
+      }
+      .social-media
+      img{
+        width: 60px;
+        margin: 0 30px;
+        box-shadow: 0 0 10px 0 #7f7f7f;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </HEAD>
+  <BODY background="/" >
+    <table width="100%">
+      <tr>
+        <th width="20%"><img src="/images/1.png" height="100" width="200px" alt="Image"></img></th>
+        <th width="50%"><input type="text" size="80px" height="80px" placeholder="Search for product" alt="Image"></th>
+        <th width="10%"><button>Search</button></form></th>
+        <th width="20%"><a href="/lipstick/cart.html"><img src="/images/images.png" height="50" width="70" align="right"></marquee></a></th>
+      </tr>
+    </table><br>
+    <TABLE  WIDTH="100%" BGCOLOR="LIGHTBLUE">
+      <tr>
+        <th width="20%"><a href="/Home_page.html" id="box">HOME</a></th>
+                <TH WIDTH="20%"><A HREF="/Categories.HTML" id="box">CATEGORIES</A></TH>
+        <TH WIDTH="20%"><A HREF="/face/P1.HTML" id="box">FACE</A></TH>
+        <TH WIDTH="20%"><A HREF="/lips/P1.HTML" id="box">LIPS  </A></TH>
+        <TH WIDTH="20%"><A HREF="/Eyes/P1.HTML" id="box">EYES</A></TH>
+        <TH WIDTH="20%"><A HREF="/logn/login.html" id="log">LOGIN/SIGN UP</A></TH>
+      </tr>
+    </TABLE><br>
+    <h1>Magnet perfume glass bottles</h1>
+    <table>
+      <tr>
+        <th><img src="/lipstick/perfume/a.jpg" height="500px"></th>
+        <td> <p> <h1>Magnet perfume glass bottles</h1></p>  <br>
+          <p><h2></h2></p> <br>
+          <p><h1><b><pricing>$16</pricing> </b></h1></p> <br>
+          <p><h2>Workmanship: high art technics and hand polish create high transparency, glossiness,without bubbles, customized bottle design, customer brand, customer's ideas will be made within our cooperation, our high quality and competitive price famous brand name perfume bottles will make well profit for you ! </h2></p><br>
+          <form >
+            <button onclick="addToCart()">Add to cart</button><br><br>
+           <button onclick="buyNow()"><a href="/public/lipstick/buy.html">Buy</a></button>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <h2>Review</h2>
+    <form name="form1">
+      <textarea name="text here" cols="100" rows="5"></textarea><br>
+      <button>Submit</button>
+    </form><br>
+    <table width="100%" bgcolor="LIGHTBLUE">
+      <tr>
+        <th>Bountiful Beauty</th>
+        <th>Bountiful Beauty Business</th>
+        <th>Privacy</th>
+        <th>Need Help</th>
+      </tr>
+      <tr></tr>
+      <tr align="center">
+        <td><a href="/about us.html" id="box">About us</a></td>
+        <td><a href="/sell.html" id="box">Sell</a></td>
+        <td><a href="/privacy.html" id="box">Privacy Policy</a></td>
+        <td><a href="/FQA.html" id="box">FAQ</a></td>
+      </tr>
+      <tr align="center">
+        <td><a href="/careers.html" id="box">Careers</a></td>
+        <td><a href="/return.html" id="box">Return and Cancellation Policy</a></td>
+        <td><a href="/terms of use.html" id="box">Terms of Use</a></td>
+        <td><a href="/contact us.html" id="box">Contact us</a></td>
+      </tr>
+      <tr>
+        <td><div class="social-media"><img src="/logn/fb.png"></div></td>
+        <td><div class="social-media"><img src="/logn/insta.jpg"></div></td>
+        <td><div class="social-media"><img src="/logn/twiter.jpg"></div></td>
+        <td><div class="social-media"><img src="/logn/gmail.jpg"></div></td>
+      </tr>
+    </table>
+    <script>
+      function addToCart() {
+        // Get the product details
+        var product = {
+          name: "Long Lasting Bottle Glass Body Spray Fragrance",
+          price: 16.00,
+          description: "Workmanship: high art technics and hand polish create high transparency,glossiness,without bubbles, customized bottle design, customer brand, customer's ideas will be made within our cooperation, our high quality and competitive price famous brand name perfume bottles will make well profit for you !"
+        };
+        // Retrieve existing cart items from local storage or initialize an empty array
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        // Add the product to the cart
+        cartItems.push(product);
+        // Store the updated cart items back in local storage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        alert('Product added to cart');
+      }
+      
+    </script>
+  </body>
+</html>
